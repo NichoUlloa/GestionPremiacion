@@ -52,6 +52,11 @@ public class GestionPremiacion {
 
     //Seleccionar Ganadores: Este método se encargará de seleccionar a los ganadores de cada categoría y enviarles el aviso correspondiente.
    // metodo seleccionarPeliculaGanadoraCategoria usando metodo asignarPuntajeRandomPeliculas
+    public void asignarPuntajeRandomPeliculas() {
+        for (Pelicula pelicula : peliculas) {
+            pelicula.setPuntaje((int) (Math.random() * 10) + 1);
+        }
+    }
     public void seleccionarPeliculaGanadoraCategoria(CategoriasPeliculas categoria) {
         asignarPuntajeRandomPeliculas();
         Pelicula peliculaGanadora = null;
@@ -68,18 +73,7 @@ public class GestionPremiacion {
             for (Actor actor : peliculaGanadora.getActores()) {
                 actor.setGanador(true);
             }
-            for (Director director : directores) {
-                if (director == peliculaGanadora.getDirector()) {
-                    director.setGanador(true);
-                }
-            }
-        }
-    }
-
-    // **** Metodo asignar puntaje random a peliculas
-    public void asignarPuntajeRandomPeliculas() {
-        for (Pelicula pelicula : peliculas) {
-            pelicula.setPuntaje((int) (Math.random() * 10) + 1);
+            directores.add(peliculaGanadora.getDirector());
         }
     }
 
@@ -115,7 +109,4 @@ public class GestionPremiacion {
             }
         }
     }
-
-
-
 }

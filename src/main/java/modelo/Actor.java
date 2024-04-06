@@ -26,6 +26,11 @@ public class Actor extends Participante{
         return "Actor";
     }
 
+    public void setGanador(boolean ganador) {
+        this.ganador = ganador;
+    }
+
+
     @Override
     public String toString() {
         return super.toString() +

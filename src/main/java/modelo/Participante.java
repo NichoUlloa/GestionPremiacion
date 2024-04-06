@@ -1,6 +1,7 @@
 package modelo;
 
 public abstract class Participante {
+    protected boolean ganador;
     // Atributos
     private String nombre, apellido, nacionalidad;
 
