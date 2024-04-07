@@ -28,20 +28,13 @@ public class Director extends Participante{
         this.peliculas = peliculas;
     }
 
-    // Metodos
     // metodo getTipo
     public String getTipo() {
         return "Director";
     }
 
-    public void setGanador(boolean ganador) {
-        this.ganador = ganador;
-    }
-
-
     @Override
     public String toString() {
-        return super.toString() +
-                "Peliculas: " + peliculas + "\n";
+        return super.toString();
     }
 }

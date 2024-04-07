@@ -11,9 +11,9 @@
         private String titulo;
         private int duracion;
         private String sinopsis;
-        public GestionPremiacion premiacion;
         private CategoriasPeliculas categoria;
         private int puntaje;
+        private boolean ganadora;
 
         // Constructor
         public Pelicula(LocalDate fechaEstreno, String titulo, int duracion, String sinopsis, CategoriasPeliculas categoria, Director director) {
@@ -83,14 +83,17 @@
             this.puntaje = puntaje;
         }
 
-        public GestionPremiacion getPremiacion() {
-            return this.premiacion;
+        public boolean getGanadora() {
+            return this.ganadora;
         }
-        public void setPremiacion(GestionPremiacion premiacion) {
-            this.premiacion = premiacion;
+        public void setGanadora(boolean ganadora) {
+            this.ganadora = ganadora;
         }
 
-        // Metodos
+        public boolean isGanadora() {
+            return this.ganadora;
+        }
+
         public void agregarActor(Actor actor) {
             this.actores.add(actor);
         }
@@ -105,5 +108,4 @@
                     "Categoria: " + categoria.getCategoria() + "\n" +
                     "Puntaje: " + puntaje + "\n";
         }
-
     }

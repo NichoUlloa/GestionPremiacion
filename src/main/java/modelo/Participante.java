@@ -1,7 +1,6 @@
 package modelo;
 
 public abstract class Participante {
-    protected boolean ganador;
     // Atributos
     private String nombre, apellido, nacionalidad;
 
@@ -34,7 +33,6 @@ public abstract class Participante {
         this.nacionalidad = nacionalidad;
     }
 
-    // Metodos
     // metodo getTipo
     public abstract String getTipo();
 
@@ -43,13 +41,4 @@ public abstract class Participante {
         return "Nombre: " + nombre + " " + apellido + "\n" +
                 "Nacionalidad: " + nacionalidad + "\n";
     }
-
-    public void setGanador(boolean b) {
-    }
-
-    public boolean isGanador() {
-        return false;
-    }
-
-
 }
