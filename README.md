@@ -1,20 +1,26 @@
-Proyecto Gestion Premiacion
+### Sistema de Gestión de Premios Cinematográficos
+#### Problemática:
+Con el objetivo de reconocer y premiar el trabajo de directores y actores en la cinematografía chilena, se desea desarrollar un sistema de gestión de premios cinematográficos. Este sistema debe permitir gestionar diferentes aspectos de la premiación, asegurando la transparencia del proceso y proporcionando información relevante sobre las películas, directores y actores participantes.
 
-Como parte de una propuesta de premios a la cinematografía en Chile se quiere generar un sistema que permita gestionar los diferentes aspectos de la premiación.
+#### lases Principales:
+* Pelicula: Representa una película que participa en la premiación. Contiene información como director, actores, fecha de estreno, título, duración y sinopsis.
+* Director: Representa a un director de cine, que puede estar vinculado a una o varias películas.
+* Actor: Representa a un actor que participa en la premiación, vinculado a una o varias películas.
+* Jurado: Representa a un miembro del jurado encargado de la votación en la premiación.
+* GestionPremiacion: Gestiona la premiación, incluyendo la asignación de puntajes a las películas, la selección de películas ganadoras y la información sobre los premiados.
+#### Requerimientos
+##### Gestión de Participantes y Películas:
+* Los directores y actores se consideran participantes en la premiación.
+* Cada película tiene un director y uno o varios actores.
+* La premiación se centra en las películas, pero se reconocen los méritos individuales de los directores y actores.
+##### Transparencia del Proceso:
+* Solo los directores y el jurado tienen acceso a la votación.
+* Cada director recibe un aviso previo sobre si ha sido elegido ganador en una categoría específica. Este aviso es único por categoría, evitando la repetición de premios para un mismo participante en una misma categoría.
+##### Información Disponible:
+* El sistema debe proporcionar información sobre las películas ganadoras y su categoría correspondiente.
+* Debe ser posible obtener la lista de actores que participan en una película determinada.
+* Se requiere también la capacidad de identificar los actores participantes en una película ganadora.
+* El sistema debe ser capaz de listar directores y actores que son parte de la premiación.
 
-La premiación busca premiar a los directores principalmente y dar créditos a los actores.
-
-Para lograr esto se requiere que el sistema tome en consideración los siguientes puntos:
-
-Tanto directores como actores se consideran como participantes aunque, sólo se premian a las películas.
-Un actor puede estar vinculado a múltiples películas.
-Cada película tiene información como director, actores, fecha de estreno, título, duración y sinopsis. (Se recomienda Lorem Ipsum para las sinopsis).
-Para garantizar la transparencia del proceso, sólo los directores y el jurado tienen información sobre la votación. Cada uno de ellos (directores) recibe un aviso previo, representado como un booleano que indica si han sido elegidos ganadores en una categoría específica. Este aviso es irrepetible en cada categoría de la premiación, lo que significa que cada participante puede recibir solo un aviso por categoría en la que compite.
-
-
-El sistema debe poder informar a los presentadores la siguiente información:
-
-Películas ganadoras en la premiación y su respectiva categoría.
-Todos los actores que participan en una película.
-Actores participantes de una película ganadora.
-Listar Directores y actores que son parte de la premiación.
+#### Diagrama de Clases UML
+![Diagrama de Clases UML](![GestionPremiacion UML.png](GestionPremiacion%20UML.png)
