@@ -23,4 +23,4 @@ Con el objetivo de reconocer y premiar el trabajo de directores y actores en la 
 * El sistema debe ser capaz de listar directores y actores que son parte de la premiación.
 
 #### Diagrama de Clases UML
-![Diagrama de Clases UML](![GestionPremiacion UML.png](GestionPremiacion%20UML.png)
+![GestionPremiacion UML.png](GestionPremiacion%20UML.png)
